@@ -1,9 +1,10 @@
 // License MIT
 
 import React, { useContext } from 'react'
-import { Icon, Image, Input, Menu, Button } from 'semantic-ui-react'
+import { Icon, Input, Menu, Button } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
-import AppContext from '../context/AppContext'
+import AppContext from '../context/AppContext';
+import logo from '../../src/assets/logo192.png';
 
 function TopMenu() {
     const {cart} = useContext(AppContext)
@@ -13,8 +14,12 @@ function TopMenu() {
             <Menu fixed='top' stackable borderless inverted style={menuStyle}>
                 <Menu.Item header>
                     <Link to='/'>
-                        <Image src='/images/store-logo.svg' style={{ marginRight: '1.5em', marginLeft: '4em' }} />
+                        <img src={logo} className="App-logo" alt="logo" width="50" height="50"/>
                     </Link>
+                    <p style={{ marginRight: '1.5em', marginLeft: '4em' }}> WorkLight Tools
+                        <Link to="/about">About</Link>
+                        <Link to="/about">Contact</Link>
+                    </p>
                 </Menu.Item>
                 <Menu.Menu>
                     <Menu.Item>
@@ -24,6 +29,7 @@ function TopMenu() {
                                            inverted />} placeholder='Search...' 
                                                         style={{ width: '40em' }} />
                     </Menu.Item>
+
                 </Menu.Menu>
                 <Menu.Item position='right'>
                     <Link to={'/Checkout'}>

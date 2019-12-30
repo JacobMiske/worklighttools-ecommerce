@@ -9,6 +9,11 @@ import App from './App';
 import Product from './pages/Product'
 import Checkout from './pages/Checkout'
 import PlacedOrder from './pages/PlacedOrder'
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import SiteMap from "./pages/SiteMap";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import awsconfig from './aws-exports'
 
 Amplify.configure(awsconfig)
@@ -28,6 +33,11 @@ const routing = (
                 <Route path="/product/:id" component={Product} />
                 <Route path="/checkout" component={Checkout} />
                 <Route path="/ordercomplete" component={PlacedOrder}/>
+                <Route path="/about" component={About}/>
+                <Route path="/contact" component={Contact}/>
+                <Route path="/sitemap" component={SiteMap}/>
+                <Route path="/privacy" component={Privacy}/>
+                <Route path="/terms" component={Terms}/>
                 <Route component={App} />
             </Switch>
         </Router>

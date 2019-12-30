@@ -16,11 +16,9 @@ function Carousel() {
     };
 
     const sliderImages = [
-        'slider-1.jpg',
-        'slider-2.jpg',
-        'slider-3.jpg',
-        'slider-4.jpg',
-        'slider-5.jpg'
+        'slider1.jpg',
+        'slider2.jpg',
+        'slider3.jpg'
     ];
 
     const sliderItems = sliderImages.map((image) =>

@@ -16,7 +16,9 @@ import CheckoutPayment from '../components/CheckoutPayment'
 // const uuidv4 = require('uuid/v4');
 
 function Checkout(props) {
+    // eslint-disable-next-line
     const [ordering, setOrdering] = useState(false)
+    // eslint-disable-next-line
     const [card, setCard] = useState(0)
     const [totalPurchase, setTotal] = useState(0)
     const [orderComplete, setOrderComplete] = useState(false)

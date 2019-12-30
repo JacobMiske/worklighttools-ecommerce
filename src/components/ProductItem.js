@@ -37,11 +37,12 @@ function ProductItem(props) {
                         </Link>
                         <Container style={{ paddingLeft: '2em' }}>
                             <LinkStyle><Link to={'/Product/' + props.item.id}>{props.item.name}</Link></LinkStyle>
-                            <StoreText>Amazon</StoreText>
-                            {stars}
+                            <StoreText>WorkLight Tools</StoreText>
                             <Grid columns={2}>
                                 <Grid.Column width={3}><PriceText>${props.item.price}</PriceText></Grid.Column>
-                                <Grid.Column verticalAlign='bottom'><img src='/images/misc/prime.png' alt='prime'/></Grid.Column>
+                                <Grid.Column verticalAlign='right'>
+                                    <p>   On Sale</p>
+                                </Grid.Column>
                             </Grid>
                         </Container>
                     </Grid.Column>

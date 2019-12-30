@@ -11,8 +11,7 @@ import InitState from './pages/InitState'
 import TopMenu from './components/TopMenu'
 import Carousel from './components/Carousel'
 import ItemTable from './components/ItemTable'
-
-import './App.css'
+import './App.css';
 
 function App() {
     return (
@@ -20,21 +19,21 @@ function App() {
             <InitState/>
             <TopMenu />
             <Container text style={{ marginBottom: '1em' }}>
-                <Header as='h1' style={{ textAlign: 'center' }}>All things Alexa</Header>
+                <Header as='h1' style={{ textAlign: 'center' }}>News at WorkLight Tools</Header>
             </Container>
             <Container fluid>
                 <Carousel />
             </Container>
             <Container style={{ marginTop: '2em' }}>
-                <Header as='h2'>Smart displays</Header>
-                <p>Everything you love about Alexa, and now she can show you things. Get the weather forecast, watch the news, and see lyrics with Amazon Music.</p>
+                <Header as='h2'>Electronics</Header>
+                <p>Add to your existing prototype boards</p>
             </Container>
             <Container style={{ marginTop: '2em' }}>
                 <ItemTable type='echo' />
             </Container>
             <Container style={{ marginTop: '2em' }}>
-                <Header as='h2'>Echo companions</Header>
-                <p>Enjoy richer, more dynamic music with devices designed to work with Echo smart speakers or your existing sound system.</p>
+                <Header as='h2'>Mechanical</Header>
+                <p>Mount motors, frame speakers, and drape LEDs</p>
             </Container>
             <Container style={{ marginTop: '2em' }}>
                 <ItemTable type='companion' />

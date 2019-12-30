@@ -20,7 +20,7 @@ function ItemTable(props) {
     })
 
     return (
-        <Grid stackable divided columns={4}>
+        <Grid stackable divided columns={5}>
             {productItems}
         </Grid>
     )
