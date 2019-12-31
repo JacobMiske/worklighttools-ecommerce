@@ -12,7 +12,7 @@ function CheckoutBanner(props) {
             <Grid.Row>
                 <Grid.Column width={2}>
                     <Link to='/'>
-                        <Image src='/images/store-logo-2.png' style={logoStyle} />
+                        <Image src='/images/store-logo-2.png' style={logoStyle} width="50" height="50"/>
                     </Link>
                 </Grid.Column>
                 <Grid.Column width={12} verticalAlign='middle' textAlign='center' style={headerStyle}>

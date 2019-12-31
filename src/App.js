@@ -9,6 +9,7 @@ import signUpConfig from './config/signUpConfig'
 
 import InitState from './pages/InitState'
 import TopMenu from './components/TopMenu'
+import Footer from './components/Footer';
 import Carousel from './components/Carousel'
 import ItemTable from './components/ItemTable'
 import './App.css';
@@ -29,7 +30,7 @@ function App() {
                 <p>Add to your existing prototype boards</p>
             </Container>
             <Container style={{ marginTop: '2em' }}>
-                <ItemTable type='echo' />
+                <ItemTable type='shield' />
             </Container>
             <Container style={{ marginTop: '2em' }}>
                 <Header as='h2'>Mechanical</Header>
@@ -37,6 +38,9 @@ function App() {
             </Container>
             <Container style={{ marginTop: '2em' }}>
                 <ItemTable type='companion' />
+            </Container>
+            <Container text style={{ marginBottom: '1em' }}>
+                <Footer />
             </Container>
         </div>
     );

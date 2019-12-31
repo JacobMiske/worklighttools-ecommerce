@@ -3,13 +3,18 @@
 
 import React from 'react'
 import { Grid, Divider, Input, Segment, Button } from 'semantic-ui-react'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import StripeCheckout from 'react-stripe-checkout';
 
 function CheckoutSummary(props) {
     const {user, total} = props
 
     function getAtt(name) {
         return user ? user[name] : ""
+    }
+
+    function handleToken(token, addresses) {
+        console.log({token, addresses})
     }
 
     return (
@@ -35,13 +40,24 @@ function CheckoutSummary(props) {
                             <BoldText>2</BoldText>
                         </Grid.Column>
                         <Grid.Column width={4}>
-                            <BoldText>Payment method</BoldText>
+                            <BoldText>Payment methods</BoldText>
                         </Grid.Column>
                         <Grid.Column width={7} verticalAlign='middle'>
-                            <Grid columns={2}>
+                            <Grid columns={3}>
                                 <Grid.Column width={2}><img src='/images/misc/amex.gif' alt=''/></Grid.Column>
                                 <Grid.Column width={10}>
                                     <b>American Express</b>
+                                    <b>PayPal</b>
+                                </Grid.Column>
+                                <Grid.Column>
+                                  <StripeCheckout
+                                    stripeKey="pk_test_revWelj4x1RBFQdPL0ctqDH000sejhBjYK"
+                                    token={handleToken}
+                                    billingAddress
+                                    shippingAddress
+                                    amount={total}
+                                    name="WLT Product"
+                                  />
                                 </Grid.Column>
                             </Grid>
                             <br/>

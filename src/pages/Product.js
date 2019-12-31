@@ -67,7 +67,7 @@ function Product(props) {
                             <Grid.Column verticalAlign='bottom'><img src='/images/misc/prime.png' alt='prime' /></Grid.Column>
                         </Grid>
                         <StockText>In Stock.</StockText>
-                        <BoldText>Want it delivered by tomorrow?</BoldText>
+                        <BoldText>Want it delivered in a week?</BoldText>
                         <InfoText>
                             <ul>
                                 {features}
