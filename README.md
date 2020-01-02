@@ -1,3 +1,9 @@
+Built using a demo app on the MIT and Apache Licenses from AWS.
+
+Added on by J. Miske
+
+Original README below 
+
 ![logo](.images/amplify-plus-pinpoint.png)
 
 # Build your own omnichannel e-commerce experience
