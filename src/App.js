@@ -1,5 +1,4 @@
-// Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// SPDX-License-Identifier: MIT-0
+// MIT License
 
 import React from 'react'
 import { Container, Header } from 'semantic-ui-react'
@@ -15,35 +14,36 @@ import ItemTable from './components/ItemTable'
 import './App.css';
 
 function App() {
-    return (
-        <div style={styles}>
-            <InitState/>
-            <TopMenu />
-            <Container text style={{ marginBottom: '1em' }}>
-                <Header as='h1' style={{ textAlign: 'center' }}>News at WorkLight Tools</Header>
-            </Container>
-            <Container fluid>
-                <Carousel />
-            </Container>
-            <Container style={{ marginTop: '2em' }}>
-                <Header as='h2'>Electronics</Header>
-                <p>Add to your existing prototype boards</p>
-            </Container>
-            <Container style={{ marginTop: '2em' }}>
-                <ItemTable type='shield' />
-            </Container>
-            <Container style={{ marginTop: '2em' }}>
-                <Header as='h2'>Mechanical</Header>
-                <p>Mount motors, frame speakers, and drape LEDs</p>
-            </Container>
-            <Container style={{ marginTop: '2em' }}>
-                <ItemTable type='companion' />
-            </Container>
-            <Container text style={{ marginBottom: '1em' }}>
-                <Footer />
-            </Container>
-        </div>
-    );
+
+  return (
+    <div style={styles}>
+      <InitState/>
+      <TopMenu/>
+      <Container text style={{marginTop: '1em', marginBottom: '1em'}}>
+        <Header as='h1' style={{textAlign: 'center'}}>
+          News at WorkLight Tools
+        </Header>
+      </Container>
+      <Container fluid>
+        <Carousel/>
+      </Container>
+      <Container style={{marginTop: '2em'}}>
+        <Header as='h2'>Electronics</Header>
+        <p>Add to your existing prototype boards</p>
+      </Container>
+      <Container style={{marginTop: '2em'}}>
+        <ItemTable type='shield'/>
+      </Container>
+      <Container style={{marginTop: '2em'}}>
+        <Header as='h2'>Mechanical</Header>
+        <p>Mount motors, frame speakers, and drape LEDs</p>
+      </Container>
+      <Container style={{marginTop: '2em'}}>
+        <ItemTable type='companion'/>
+      </Container>
+      <Footer/>
+    </div>
+  );
 }
 
 export default withAuthenticator(App, { usernameAttributes: 'email', signUpConfig });
