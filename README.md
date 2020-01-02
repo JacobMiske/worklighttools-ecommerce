@@ -46,7 +46,7 @@ Explore Amazon Pinpoint and setup our segments and campaign to capture and react
 If you have extra time lets explore how we can integrate Amazon Personalize to provide predicitve user engagement -->
 
 ## Clean up
-When you are done with the buidler session you can clean up your AWS account by running the command below in the Cloud9 environment that we created.
+When you are done with the builder session you can clean up your AWS account by running the command below in the Cloud9 environment that we created.
 
 ```Shell
 amplify delete
@@ -56,7 +56,7 @@ Once you've deleted your Amplify project you can delete your Cloud9 instance.
 
 ## Contact
 
-**Owner**: buchmans@amazon.com
+**Owner**: jacobmiske@gmail.com
 
 ## License Summary
 
