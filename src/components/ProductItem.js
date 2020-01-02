@@ -1,5 +1,4 @@
-// Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// SPDX-License-Identifier: MIT-0
+// MIT License
 
 import React from 'react'
 import { Grid, Image, Container, Icon } from 'semantic-ui-react'
@@ -7,9 +6,9 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components'
 
 function ProductItem(props) {
-    var stars
-    var totalChits = 0
-    var i
+    var stars;
+    var totalChits = 0;
+    var i;
 
     for (i = 0; i < 5; i++) {
         if (i <= (props.item.stars - 1)) {
@@ -41,7 +40,7 @@ function ProductItem(props) {
                             <Grid columns={2}>
                                 <Grid.Column width={3}><PriceText>${props.item.price}</PriceText></Grid.Column>
                                 <Grid.Column verticalAlign='right'>
-                                    <p>   On Sale</p>
+                                    {/*<p>   On Sale</p>*/}
                                 </Grid.Column>
                             </Grid>
                         </Container>

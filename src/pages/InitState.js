@@ -1,5 +1,4 @@
-// Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// SPDX-License-Identifier: MIT-0
+// MIT License
 
 import React, {useEffect, useContext} from 'react'
 import { Analytics, Auth, API } from 'aws-amplify'

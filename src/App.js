@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { Container, Header } from 'semantic-ui-react'
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
 import { withAuthenticator } from 'aws-amplify-react'
 
 import signUpConfig from './config/signUpConfig'
@@ -13,8 +15,9 @@ import Carousel from './components/Carousel'
 import ItemTable from './components/ItemTable'
 import './App.css';
 
-function App() {
+Amplify.configure(awsconfig);
 
+function App() {
   return (
     <div style={styles}>
       <InitState/>
@@ -41,7 +44,7 @@ function App() {
       <Container style={{marginTop: '2em'}}>
         <ItemTable type='companion'/>
       </Container>
-      <Footer/>
+      <Footer style={{marginTop: '2em'}}/>
     </div>
   );
 }
@@ -51,4 +54,4 @@ export default withAuthenticator(App, { usernameAttributes: 'email', signUpConfi
 const styles = {
     marginLeft: '1em',
     marginRight: '1em'
-}
+};

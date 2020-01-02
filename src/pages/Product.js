@@ -1,5 +1,4 @@
-// Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// SPDX-License-Identifier: MIT-0
+// MIT License
 
 import React, { useState, useContext } from 'react'
 import { Button, Grid, Icon, Image, Header, Card, Divider, Dropdown } from 'semantic-ui-react'
@@ -10,6 +9,7 @@ import AppContext from '../context/AppContext'
 
 import InitState from './InitState'
 import TopMenu from '../components/TopMenu'
+import Footer from "../components/Footer";
 
 function Product(props) {
     const [quantity, setQuantity] = useState(1)
@@ -18,25 +18,25 @@ function Product(props) {
 
     const { params } = props.match
 
-    var _product = items.filter(function (el) {
-        return el.id === parseInt(params.id)
-    })
+		const _product = items.filter(function (el) {
+			return el.id === parseInt(params.id)
+		});
 
-    var product = ""
-    if (_product.length === 1) product = _product[0]
+		var product = ""
+			if (_product.length === 1) product = _product[0]
 
-    if (product) {
-        var features = product.info.map((item) => {
-            return <li key={item.length}>{item}</li>
-        })
-    }
+			if (product) {
+					var features = product.info.map((item) => {
+							return <li key={item.length}>{item}</li>
+					})
+			}
 
-    var quant = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
-        return { key: item, value: item, text: item }
-    })
+			var quant = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
+					return { key: item, value: item, text: item }
+			});
 
     function addItem(product, quantity) {
-        addItemToCart(product, quantity)
+        addItemToCart(product, quantity);
 
         Analytics.updateEndpoint({
             attributes: {
@@ -52,22 +52,23 @@ function Product(props) {
         <div style={styles}>
             <InitState/>
             <TopMenu />
-            <Grid columns={3} stackable>
+            <Grid columns={3} stackable style={{marginTop: '1em'}}>
                 <Grid.Row>
                     <Grid.Column>
                         <Image src={product.mainImage} />
                     </Grid.Column>
                     <Grid.Column width={7}>
                         <Header as='h2'>{product.title}</Header>
-                        by Amazon
+                        by WorkLight Tools
                     <Divider />
                         <Grid columns={3}>
                             <Grid.Column width={1} style={{ marginRight: '5px' }}>Price:</Grid.Column>
                             <Grid.Column width={2} textAlign='left'><PriceText>${product.price}</PriceText></Grid.Column>
-                            <Grid.Column verticalAlign='bottom'><img src='/images/misc/prime.png' alt='prime' /></Grid.Column>
+                            {/*<Grid.Column verticalAlign='bottom'><p>On Sale</p></Grid.Column>*/}
                         </Grid>
                         <StockText>In Stock.</StockText>
-                        <BoldText>Want it delivered in a week?</BoldText>
+                        <BoldText>Want it delivered in two weeks? We can do that.</BoldText>
+                        <BoldText> Features: </BoldText>
                         <InfoText>
                             <ul>
                                 {features}
@@ -78,10 +79,10 @@ function Product(props) {
                         <Card fluid>
                             <Card.Content>
                                 <div>
-                                    I'd like <Dropdown floating 
+                                    Quantity: <Dropdown floating
                                                        inline options={quant} 
                                                        defaultValue={1} 
-                                                       onChange={(e, {value}) => setQuantity(value)}/> item, please.
+                                                       onChange={(e, {value}) => setQuantity(value)}/>
                                 </div>
                                 <Divider />
                                 <Button icon 
@@ -92,20 +93,21 @@ function Product(props) {
                                     <Icon name='cart' />
                                     <ButtonStyle>Add to Cart</ButtonStyle>
                                 </Button>
-                                <Divider />
-                                <Button icon 
-                                        labelPosition='left' 
-                                        color='grey' 
-                                        fluid
-                                    >
-                                    <Icon name='list' />
-                                    <ButtonStyle>Add to Wish List</ButtonStyle>
-                                </Button>
+                                {/*<Divider />*/}
+                                {/*<Button icon */}
+                                {/*        labelPosition='left' */}
+                                {/*        color='grey' */}
+                                {/*        fluid*/}
+                                {/*    >*/}
+                                {/*    <Icon name='list' />*/}
+                                {/*    <ButtonStyle>Add to Wish List</ButtonStyle>*/}
+                                {/*</Button>*/}
                             </Card.Content>
                         </Card>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
+            <Footer style={{marginTop: '2em'}}/>
         </div>
     )
 }

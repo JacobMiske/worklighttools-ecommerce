@@ -1,20 +1,21 @@
 import React from 'react';
+import InitState from "./InitState";
+import TopMenu from "../components/TopMenu";
+import {Container, Header} from "semantic-ui-react";
+import Footer from "../components/Footer";
 
 class SiteMap extends React.Component {
 	render() {
 		return(
-			<div className="Body">
-				<header className="App-header">
-					<div className="App-logo">
-						<p>
-							WorkLight Tools was created in response to a lack of easy to use technical electronics that hackers can
-							adapt to their use cases.
-						</p>
-						<p>
-							A greater idea was hatched that many tools surrounding us everyday are not quite built to last.
-						</p>
-					</div>
-				</header>
+			<div>
+				<InitState/>
+				<TopMenu/>
+				<Container text style={{marginTop: '1em', marginBottom: '1em'}}>
+					<Header as='h1' style={{textAlign: 'center'}}>
+						Site map of WorkLight Tools
+					</Header>
+				</Container>
+				<Footer style={{marginTop: '2em'}}/>
 			</div>
 		);
 	}

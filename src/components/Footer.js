@@ -13,20 +13,26 @@ function Footer() {
 										<Link to='/'>
 												<img src={logo} className="App-logo" alt="logo" width="50" height="50"/>
 										</Link>
-										<p class="black text" style={{ marginRight: '1.5em', marginLeft: '4em' }}>
-											  WorkLight Tools
-											<b />
-												<Link to="/about">About</Link>
-												<Link to="/about">Contact</Link>
+										<p class="black text" style={{ marginRight: '1.5em', marginLeft: '2.5em' }}>
+											  WorkLight Tools, Made in Cambridge, MA
+										</p>
+										<p class="black text" style={{ marginRight: '1.5em', marginLeft: '2.5em' }}>
+												Address: 3 Ames Street, Cambridge MA 02142
 										</p>
 								</Menu.Item>
-								<Menu.Menu>
-										<p style={{ marginRight: '1.5em', marginLeft: '4em' }}> WorkLight Tools
-												<Link to="/about">SiteMap</Link>
-												<Link to="/about">Privacy</Link>
-												<Link to="/about">Terms</Link>
-										</p>
-								</Menu.Menu>
+
+								<Menu.Item>
+									{/*<Link to="/sitemap" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>*/}
+									{/*	<p class="large blue text">Site Map</p>*/}
+									{/*</Link>*/}
+									<span/>
+									<Link class="large blue text" to="/privacy" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>
+										<p class="large blue text">Privacy</p>
+									</Link>
+									<Link class="large blue text" to="/terms" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>
+										<p class="large blue text">Terms</p>
+									</Link>
+								</Menu.Item>
 						</Menu>
 				</div>
 		)

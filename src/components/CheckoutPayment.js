@@ -1,12 +1,11 @@
-// Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// SPDX-License-Identifier: MIT-0
+// MIT License
 
 import React from 'react'
 import { Card, Button, Divider, Grid } from 'semantic-ui-react'
 import styled from 'styled-components'
 
 function CheckoutPayment(props) {
-    const {total} = props
+    const {total} = props;
 
     return(
         <div>

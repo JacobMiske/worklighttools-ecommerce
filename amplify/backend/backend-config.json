@@ -33,11 +33,6 @@
 					]
 				}
 			]
-		},
-		"lambdaStripe": {
-			"service": "Lambda",
-			"providerPlugin": "awscloudformation",
-			"build": true
 		}
 	},
 	"api": {
