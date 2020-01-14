@@ -11,7 +11,7 @@ function CheckoutPayment(props) {
         <div>
             <Card fluid>
                 <Card.Content>
-                    <Button fluid color='orange' loading={props.placedOrder} onClick={props.onOrder}>Place your order</Button>
+                    <Button fluid color='blue' loading={props.placedOrder} onClick={props.onOrder}>Place your order</Button>
                     <Divider/>
                     <BoldText>Order Summary</BoldText>
                     <Grid columns={2}>

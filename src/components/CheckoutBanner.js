@@ -16,7 +16,7 @@ function CheckoutBanner(props) {
                     </Link>
                 </Grid.Column>
                 <Grid.Column width={12} verticalAlign='middle' textAlign='center' style={headerStyle}>
-                    <Header as='h1' textAlign='center'>Checkout (<QuantityText>{props.quantity}</QuantityText>)</Header>
+                    <Header as='h1' textAlign='center'> Checkout (<QuantityText> {props.quantity} </QuantityText>)</Header>
                 </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -26,8 +26,9 @@ function CheckoutBanner(props) {
 export default CheckoutBanner
 
 const topBanner = {
-    background: 'url(/images/header-bkg.png)',
-    borderColor: '#DDD',
+    // background: 'url(/images/header-bkg.png)',
+    backgroundColor: '#D3D3D3',
+    borderColor: '#D3D3D3',
     borderStyle: 'solid',
     borderWidth: '0 0 1px 0',
     height: '73px'

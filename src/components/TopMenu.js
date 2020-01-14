@@ -1,8 +1,8 @@
 // License MIT
 
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { Auth } from 'aws-amplify';
-import { Menu, Button } from 'semantic-ui-react'
+import { Menu, Button } from 'semantic-ui-react';
 import { Link } from "react-router-dom";
 import AppContext from '../context/AppContext';
 import logo from '../../src/assets/logo192.png';
@@ -14,53 +14,51 @@ function SignOutButton() {
 }
 
 
+
 function TopMenu() {
-	const {cart} = useContext(AppContext);
+	const { cart } = useContext(AppContext);
+
+	function CheckoutClick() {
+		console.log(cart.items)
+	}
 
 	return (
 		<div style={divStyle}>
-			<Menu fixed='top' stackable borderless inverted style={menuStyle}>
+			<Menu fixed='top' style={menuStyle} fluid widths={5}>
 				<Menu.Item header style={headerStyle}>
 					<Link to='/'>
 						<img src={logo} className="App-logo" alt="logo" width="50" height="50"/>
 					</Link>
 				</Menu.Item>
-				<Menu.Menu>
-					<Menu.Item>
-						{/*<Input icon={<Icon name='search' */}
-						{/*                   link color='yellow' */}
-						{/*                   bordered */}
-						{/*                   inverted />} placeholder='Search...' */}
-						{/*                                style={{ width: '40em' }} />*/}
-					</Menu.Item>
-					<Menu.Item>
-						<Link to='/'>
-							<p class="large black text" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
-								WorkLight Tools
-							</p>
-						</Link>
-					</Menu.Item>
-					<Menu.Item>
-						<Link to="/about" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
-							<p class="large blue text">About</p>
-						</Link>
-						<span/>
-						<Link class="large blue text" to="/contact" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
-							<p class="large blue text">Contact</p>
-						</Link>
-					</Menu.Item>
-				</Menu.Menu>
+				<Menu.Item>
+					<Link to='/'>
+						<p class="large black text" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
+							WorkLight Tools
+						</p>
+					</Link>
+				</Menu.Item>
+				<Menu.Item>
+					<Link to="/about" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
+						<p class="large blue text">About</p>
+					</Link>
+				</Menu.Item>
+				<Menu.Item>
+					<Link class="large blue text" to="/contact" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
+						<p class="large blue text">Contact</p>
+					</Link>
+				</Menu.Item>
 				<Menu.Item position='right'>
 					<Link to={'/Checkout'}>
 						<Button
-							color='yellow'
+							color='blue'
 							icon='cart'
 							label={cart.items.length}
 							labelPosition='right'
 							style={cartStyle}
+							onClick={CheckoutClick}
 						/>
 					</Link>
-					<button onClick={SignOutButton}>SignOut</button>
+					<Button onClick={SignOutButton}>Sign Out</Button>
 				</Menu.Item>
 			</Menu>
 		</div>
@@ -70,18 +68,27 @@ function TopMenu() {
 export default TopMenu;
 
 const menuStyle = {
-    // HTML lightgray / lightgrey
-	  background: '#D3D3D3'
+	// HTML lightgray / lightgrey
+	background: '#D3D3D3',
+	borderColor: '#D3D3D3',
+	borderStyle: 'solid',
+	borderWidth: '0 0 1px 0'
 };
 
 const headerStyle = {
-		borderBottom: '1em'
+	borderBottom: '1em',
+	borderColor: '#D3D3D3',
+	borderStyle: 'solid',
+	borderWidth: '0 0 1px 0'
 };
 
 const divStyle = {
-	  paddingTop: '6em'
+	paddingTop: '6em',
+	borderColor: '#D3D3D3',
+	borderStyle: 'solid',
+	borderWidth: '0 0 1px 0'
 };
 
 const cartStyle = {
-    marginRight: '2rem'
+	marginRight: '2rem'
 };

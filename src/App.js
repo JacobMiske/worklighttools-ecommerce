@@ -44,6 +44,7 @@ function App() {
       <Container style={{marginTop: '2em'}}>
         <ItemTable type='companion'/>
       </Container>
+
       <Footer style={{marginTop: '2em'}}/>
     </div>
   );

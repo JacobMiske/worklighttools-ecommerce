@@ -1,5 +1,4 @@
-// Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// SPDX-License-Identifier: MIT-0
+// MIT License
 
 import React, {useState, useEffect, useContext} from 'react'
 import { Grid } from 'semantic-ui-react'
@@ -10,7 +9,7 @@ import AppContext from '../context/AppContext'
 import InitState from './InitState'
 import CheckoutBanner from '../components/CheckoutBanner'
 import CheckoutSummary from '../components/CheckoutSummary'
-import CheckoutPayment from '../components/CheckoutPayment'
+// import CheckoutPayment from '../components/CheckoutPayment'
 
 // var product_data = require('../products.json');
 // const uuidv4 = require('uuid/v4');
@@ -103,14 +102,14 @@ function Checkout(props) {
                                          total={totalPurchase}
                                          />
                     </Grid.Column>
-                    <Grid.Column floated='right' width={5}>
-                        <CheckoutPayment placedOrder={ordering} 
-                                         onOrder={submitOrder}
-                                         user={user}
-                                         cart={cart}
-                                         total={totalPurchase}
-                                         />
-                    </Grid.Column>
+                    {/*<Grid.Column floated='right' width={5}>*/}
+                    {/*    <CheckoutPayment placedOrder={ordering} */}
+                    {/*                     onOrder={submitOrder}*/}
+                    {/*                     user={user}*/}
+                    {/*                     cart={cart}*/}
+                    {/*                     total={totalPurchase}*/}
+                    {/*                     />*/}
+                    {/*</Grid.Column>*/}
                     </Grid.Row>
                 </Grid>
             </div>

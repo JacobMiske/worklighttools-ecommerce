@@ -87,7 +87,7 @@ function Product(props) {
                                 <Divider />
                                 <Button icon 
                                         labelPosition='left' 
-                                        color='orange'  
+                                        color='blue'
                                         fluid
                                         onClick={() => addItem(product, quantity)}>
                                     <Icon name='cart' />
@@ -118,7 +118,7 @@ const styles = {
     marginLeft: '1em',
     marginRight: '1em',
     marginTop: '2em'
-}
+};
 
 const PriceText = styled.div`
     font-size: 14pt;
@@ -136,12 +136,12 @@ const BoldText = styled.div`
     font-size: 10pt;
     font-weight: bold;
     padding-bottom: 1em;
-`
+`;
 
 const InfoText = styled.div`
     font-size: 10pt;
-`
+`;
 
 const ButtonStyle = styled.div`
     padding-left: 2em;
-`
+`;

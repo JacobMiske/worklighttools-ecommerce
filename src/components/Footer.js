@@ -8,7 +8,7 @@ import logo from '../../src/assets/logo192.png';
 function Footer() {
 		return (
 				<div style={divStyle}>
-						<Menu stackable borderless inverted style={menuStyle}>
+						<Menu stackable borderless inverted style={menuStyle} widths={5}>
 								<Menu.Item header>
 										<Link to='/'>
 												<img src={logo} className="App-logo" alt="logo" width="50" height="50"/>
@@ -16,19 +16,18 @@ function Footer() {
 										<p class="black text" style={{ marginRight: '1.5em', marginLeft: '2.5em' }}>
 											  WorkLight Tools, Made in Cambridge, MA
 										</p>
+								</Menu.Item>
+								<Menu.Item>
 										<p class="black text" style={{ marginRight: '1.5em', marginLeft: '2.5em' }}>
-												Address: 3 Ames Street, Cambridge MA 02142
+												3 Ames Street, Cambridge MA 02142
 										</p>
 								</Menu.Item>
-
 								<Menu.Item>
-									{/*<Link to="/sitemap" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>*/}
-									{/*	<p class="large blue text">Site Map</p>*/}
-									{/*</Link>*/}
-									<span/>
 									<Link class="large blue text" to="/privacy" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>
 										<p class="large blue text">Privacy</p>
 									</Link>
+								</Menu.Item>
+								<Menu.Item>
 									<Link class="large blue text" to="/terms" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>
 										<p class="large blue text">Terms</p>
 									</Link>
