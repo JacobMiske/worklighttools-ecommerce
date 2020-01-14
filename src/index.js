@@ -3,6 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
+import {StripeProvider} from 'react-stripe-elements';
 import Amplify, { Analytics } from 'aws-amplify'
 import * as serviceWorker from './serviceWorker';
 import AppProvider from './context/AppProvider'
@@ -28,22 +29,24 @@ Analytics.autoTrack('pageView', {
 
 const routing = (
     <AppProvider>
-        <Router>
-            <Switch>
-                <Route exact path="/" component={App} />
-                <Route path="/product/:id" component={Product} />
-                <Route path="/checkout" component={Checkout} />
-                <Route path="/ordercomplete" component={PlacedOrder}/>
-                <Route path="/about" component={About}/>
-                <Route path="/contact" component={Contact}/>
-                <Route path="/sitemap" component={SiteMap}/>
-                <Route path="/privacy" component={Privacy}/>
-                <Route path="/terms" component={Terms}/>
-                <Route component={App} />
-            </Switch>
-        </Router>
+        <StripeProvider apiKey="pk_test_revWelj4x1RBFQdPL0ctqDH000sejhBjYK">
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={App} />
+                    <Route path="/product/:id" component={Product} />
+                    <Route path="/checkout" component={Checkout} />
+                    <Route path="/ordercomplete" component={PlacedOrder}/>
+                    <Route path="/about" component={About}/>
+                    <Route path="/contact" component={Contact}/>
+                    <Route path="/sitemap" component={SiteMap}/>
+                    <Route path="/privacy" component={Privacy}/>
+                    <Route path="/terms" component={Terms}/>
+                    <Route component={App} />
+                </Switch>
+            </Router>
+        </StripeProvider>
     </AppProvider>
-)
+);
 
 ReactDOM.render(routing, document.getElementById('root'));
 
