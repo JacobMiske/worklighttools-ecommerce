@@ -93,7 +93,7 @@ function Checkout(props) {
             <div style={mainDiv}>
                 <Grid columns={2}>
                     <Grid.Row>
-                    <Grid.Column floated='left' width={11}>
+                    <Grid.Column floated='left' width={15}>
                         <CheckoutSummary placedOrder={ordering} 
                                          onCardUpdate={handleCardUpdate} 
                                          onOrder={submitOrder}

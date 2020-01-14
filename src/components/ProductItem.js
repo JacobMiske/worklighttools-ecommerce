@@ -39,9 +39,6 @@ function ProductItem(props) {
                             <StoreText>WorkLight Tools</StoreText>
                             <Grid columns={2}>
                                 <Grid.Column width={3}><PriceText>${props.item.price}</PriceText></Grid.Column>
-                                <Grid.Column verticalAlign='right'>
-                                    {/*<p>   On Sale</p>*/}
-                                </Grid.Column>
                             </Grid>
                         </Container>
                     </Grid.Column>

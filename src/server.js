@@ -11,6 +11,7 @@ app.post("/charge", async (req, res) => {
 			description: "An example charge",
 			source: req.body
 		});
+		console.log(status);
 
 		res.json({status});
 	} catch (err) {
@@ -19,4 +20,4 @@ app.post("/charge", async (req, res) => {
 	}
 });
 
-app.listen(9009, () => console.log("Listening on port 9009"));
+app.listen(9000, () => console.log("Listening on port 9000"));

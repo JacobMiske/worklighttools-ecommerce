@@ -12,13 +12,14 @@ class CheckoutForm extends Component {
 
 	async submit(ev) {
 		let {token} = await this.props.stripe.createToken({name: "Name"});
+		console.log(token);
 		let response = await fetch("/charge", {
 			method: "POST",
 			headers: {"Content-Type": "text/plain"},
 			body: token.id
 		});
 
-		if (response.ok) console.log("Purchase Complete!")
+		if (response.ok) console.log("Purchase Complete!");
 		if (response.ok) this.setState({complete: true});
 	}
 
