@@ -13,8 +13,6 @@ function SignOutButton() {
 		.catch(err => console.log(err));
 }
 
-
-
 function TopMenu() {
 	const { cart } = useContext(AppContext);
 
@@ -32,19 +30,19 @@ function TopMenu() {
 				</Menu.Item>
 				<Menu.Item>
 					<Link to='/'>
-						<p class="large black text" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
+						<p className="large black text" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
 							WorkLight Tools
 						</p>
 					</Link>
 				</Menu.Item>
 				<Menu.Item>
 					<Link to="/about" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
-						<p class="large blue text">About</p>
+						<p className="large blue text">About</p>
 					</Link>
 				</Menu.Item>
 				<Menu.Item>
-					<Link class="large blue text" to="/contact" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
-						<p class="large blue text">Contact</p>
+					<Link className="large blue text" to="/contact" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
+						<p className="large blue text">Contact</p>
 					</Link>
 				</Menu.Item>
 				<Menu.Item position='right'>

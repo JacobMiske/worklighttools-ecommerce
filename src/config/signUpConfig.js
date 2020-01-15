@@ -1,8 +1,7 @@
-// Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-// SPDX-License-Identifier: MIT-0
+// MIT License
 
 const signUpConfig = {
-  header: 'Create an ACME Store Account',
+  header: 'Create a WLT Store Account',
   hiddenDefaults: ['phone_number'],
   defaultCountryCode: '1',
   signUpFields: [

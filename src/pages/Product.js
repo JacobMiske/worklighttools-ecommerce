@@ -62,8 +62,12 @@ function Product(props) {
                         by WorkLight Tools
                     <Divider />
                         <Grid columns={3}>
-                            <Grid.Column width={1} style={{ marginRight: '5px' }}>Price:</Grid.Column>
-                            <Grid.Column width={2} textAlign='left'><PriceText>${product.price}</PriceText></Grid.Column>
+                            <Grid.Column width={1} style={{ marginRight: '5px' }}>
+                                Price
+                            </Grid.Column>
+                            <Grid.Column width={2} textAlign='left'>
+                                <PriceText> ${product.price}</PriceText>
+                            </Grid.Column>
                             {/*<Grid.Column verticalAlign='bottom'><p>On Sale</p></Grid.Column>*/}
                         </Grid>
                         <StockText>In Stock.</StockText>

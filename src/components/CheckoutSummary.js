@@ -18,7 +18,7 @@ function CheckoutSummary(props) {
     //   <li>{number}</li>
     // );
     const { user } = props;
-    // const { total } = props;
+    const { total } = props;
     // const [product] = React.useState({
     //     name: "PCB1",
     // });
@@ -87,6 +87,7 @@ function CheckoutSummary(props) {
                             <BoldText>Payment With Stripe</BoldText>
                         </Grid.Column>
                         <Grid.Column width={7} verticalAlign='middle'>
+                            <p> Order total: ${total} </p>
                             <br/>
                             <Elements>
                                 <CheckoutForm/>

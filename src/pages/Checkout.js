@@ -36,20 +36,20 @@ function Checkout(props) {
 
     useEffect(() => {
         function calculateTotal() {
-            var total = 0
-            var _item = null
+            var total = 0;
+            var _item = null;
     
             cart.items.map((item) => {
                 var _product = items.filter(function (el) {
                     return el.id === item.id
-                })
+                });
     
-                _product.length === 1 ? _item = _product[0] : _item = null
+                _product.length === 1 ? _item = _product[0] : _item = null;
                 total += (_item.price * item.quantity)
                 return null
-            })
+            });
     
-            setTotal(parseFloat(total).toFixed(2))
+            setTotal(parseFloat(total).toFixed(2));
             return parseFloat(total).toFixed(2)
         }
 
@@ -67,7 +67,7 @@ function Checkout(props) {
                     itemsInCart: 0,
                     orderNumber: "1001"
                 }
-            })
+            });
 
             console.log("Purchase price", totalPurchase)
 
@@ -78,9 +78,9 @@ function Checkout(props) {
               }, {
                 _item_price: _mTotal,
                 _quantity: 1.0,
-              })
+              });
 
-            clearCart()
+            clearCart();
 
             props.history.push('/')
         }
