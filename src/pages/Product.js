@@ -12,18 +12,18 @@ import TopMenu from '../components/TopMenu'
 import Footer from "../components/Footer";
 
 function Product(props) {
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState(1);
 
-    const {items, cart, addItemToCart} = useContext(AppContext)
+    const {items, cart, addItemToCart} = useContext(AppContext);
 
-    const { params } = props.match
+    const { params } = props.match;
 
 		const _product = items.filter(function (el) {
 			return el.id === parseInt(params.id)
 		});
 
-		var product = ""
-			if (_product.length === 1) product = _product[0]
+		let product = "";
+			if (_product.length === 1) product = _product[0];
 
 			if (product) {
 					var features = product.info.map((item) => {
@@ -31,7 +31,7 @@ function Product(props) {
 					})
 			}
 
-			var quant = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
+			let quant = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
 					return { key: item, value: item, text: item }
 			});
 
@@ -61,14 +61,13 @@ function Product(props) {
                         <Header as='h2'>{product.title}</Header>
                         by WorkLight Tools
                     <Divider />
-                        <Grid columns={3}>
+                        <Grid columns={2}>
                             <Grid.Column width={1} style={{ marginRight: '5px' }}>
                                 Price
                             </Grid.Column>
                             <Grid.Column width={2} textAlign='left'>
                                 <PriceText> ${product.price}</PriceText>
                             </Grid.Column>
-                            {/*<Grid.Column verticalAlign='bottom'><p>On Sale</p></Grid.Column>*/}
                         </Grid>
                         <StockText>In Stock.</StockText>
                         <BoldText>Want it delivered in two weeks? We can do that.</BoldText>

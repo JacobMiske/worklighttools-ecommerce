@@ -7,7 +7,9 @@ const AppContext = React.createContext({
     items: [],
     user: null,
     clearCart: () => {},
-    addItemToCart: (item, quantity) => {},
+    addItemToCart: (item, quantity) => {
+
+    },
     addItems: (items) => {},
     storeUser: (user) => {}
 });

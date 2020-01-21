@@ -10,19 +10,18 @@ import InitState from './InitState'
 import CheckoutBanner from '../components/CheckoutBanner'
 import CheckoutSummary from '../components/CheckoutSummary'
 // import CheckoutPayment from '../components/CheckoutPayment'
-
 // var product_data = require('../products.json');
 // const uuidv4 = require('uuid/v4');
 
 function Checkout(props) {
     // eslint-disable-next-line
-    const [ordering, setOrdering] = useState(false)
+    const [ordering, setOrdering] = useState(false);
     // eslint-disable-next-line
-    const [card, setCard] = useState(0)
-    const [totalPurchase, setTotal] = useState(0)
-    const [orderComplete, setOrderComplete] = useState(false)
+    const [card, setCard] = useState(0);
+    const [totalPurchase, setTotal] = useState(0);
+    const [orderComplete, setOrderComplete] = useState(false);
 
-    var {user, cart, items, clearCart} = useContext(AppContext)
+    const {user, cart, items, clearCart} = useContext(AppContext);
 
     const quantText = (cart.items.length === 1) ? '1 item' : cart.items.length + ' items'
 
@@ -45,7 +44,7 @@ function Checkout(props) {
                 });
     
                 _product.length === 1 ? _item = _product[0] : _item = null;
-                total += (_item.price * item.quantity)
+                total += (_item.price * item.quantity);
                 return null
             });
     
@@ -54,7 +53,7 @@ function Checkout(props) {
         }
 
         calculateTotal()
-    }, [cart.items, items])
+    }, [cart.items, items]);
 
     useEffect(() => {
         if (orderComplete) {
@@ -69,9 +68,9 @@ function Checkout(props) {
                 }
             });
 
-            console.log("Purchase price", totalPurchase)
+            console.log("Purchase price", totalPurchase);
 
-            var _mTotal = parseFloat(totalPurchase).toFixed(2)
+            const _mTotal = parseFloat(totalPurchase).toFixed(2);
             Analytics.record('_monetization.purchase', {
                 _currency: 'USD',
                 _product_id: 'XYZ',
