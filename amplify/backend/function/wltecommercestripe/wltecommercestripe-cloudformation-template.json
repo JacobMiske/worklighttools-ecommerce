@@ -63,7 +63,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "awsamplifyecommerce-wlt-20191230005859-deployment",
-					"S3Key": "amplify-builds/wltecommercestripe-4133384c597555426161-build.zip"
+					"S3Key": "amplify-builds/wltecommercestripe-57332b56536f44614c47-build.zip"
 				}
 			}
 		},
