@@ -12,11 +12,13 @@ See the License for the specific language governing permissions and limitations 
 var express = require('express')
 var bodyParser = require('body-parser')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+const stripe = require("stripe")("sk_test_vCvAKbPv2ruTcy8JGzIzlwt2008awzIziX");
 
 // declare a new express app
 var app = express()
 app.use(bodyParser.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
+app.use(require("body-parser").text());
 
 // Enable CORS for all methods
 app.use(function(req, res, next) {
@@ -54,6 +56,23 @@ app.post('/items/*', function(req, res) {
   res.json({success: 'post call succeed!', url: req.url, body: req.body})
 });
 
+app.post("/charge", async (req, res) => {
+  try {
+    let {status} = await stripe.charges.create({
+      amount: 2000,
+      currency: "usd",
+      description: "An example charge",
+      source: req.body
+    });
+    console.log(status);
+    console.log(req);
+    res.json({status});
+  } catch (err) {
+    console.log(err);
+    res.status(500).end();
+  }
+});
+
 /****************************
 * Example put method *
 ****************************/
@@ -82,8 +101,8 @@ app.delete('/items/*', function(req, res) {
   res.json({success: 'delete call succeed!', url: req.url});
 });
 
-app.listen(3000, function() {
-    console.log("App started")
+app.listen(9000, function() {
+    console.log("App started on port 9000")
 });
 
 // Export the app object. When executing the application local this does nothing. However,
