@@ -8,28 +8,28 @@ import logo from '../../src/assets/logo192.png';
 function Footer() {
 		return (
 				<div style={divStyle}>
-						<Menu stackable borderless inverted style={menuStyle} widths={5}>
+						<Menu style={menuStyle} fluid widths={5}>
 								<Menu.Item header>
 										<Link to='/'>
 												<img src={logo} className="App-logo" alt="logo" width="50" height="50"/>
 										</Link>
-										<p class="black text" style={{ marginRight: '1.5em', marginLeft: '2.5em' }}>
+										<p className="black text" style={{ marginRight: '1.5em', marginLeft: '2.5em' }}>
 											  WorkLight Tools, Made in Cambridge, MA
 										</p>
 								</Menu.Item>
 								<Menu.Item>
-										<p class="black text" style={{ marginRight: '1.5em', marginLeft: '2.5em' }}>
+										<p className="black text" style={{ marginRight: '1.5em', marginLeft: '2.5em' }}>
 												3 Ames Street, Cambridge MA 02142
 										</p>
 								</Menu.Item>
 								<Menu.Item>
-									<Link class="large blue text" to="/privacy" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>
-										<p class="large blue text">Privacy</p>
+									<Link className="large blue text" to="/privacy" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>
+										<p className="large blue text">Privacy</p>
 									</Link>
 								</Menu.Item>
 								<Menu.Item>
-									<Link class="large blue text" to="/terms" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>
-										<p class="large blue text">Terms</p>
+									<Link className="large blue text" to="/terms" style={{marginRight: '1.5em', marginLeft: '2.5em'}}>
+										<p className="large blue text">Terms</p>
 									</Link>
 								</Menu.Item>
 						</Menu>
@@ -42,8 +42,8 @@ export default Footer;
 const menuStyle = {
 		// HTML lightgray / lightgrey
 		background: '#D3D3D3'
-}
+};
 
 const divStyle = {
 		paddingTop: '6em'
-}
+};

@@ -13,12 +13,12 @@ import {Elements} from "react-stripe-elements";
 toast.configure();
 
 function CheckoutSummary(props) {
-    const { items } = useContext(AppContext);
+    const { cart } = useContext(AppContext);
     // const listItems = items.map((number) =>
     //   <li>{number}</li>
     // );
     const { user } = props;
-    // const { total } = props;
+    const { total } = props;
     // const [product] = React.useState({
     //     name: "PCB1",
     // });
@@ -72,7 +72,7 @@ function CheckoutSummary(props) {
                             <Grid columns={3}>
                                 <Grid.Column width={10}>
                                     <p>Items:</p>
-                                    {items.map(item => <div>{item.name}</div>)}
+                                    {cart.items.map(item => <div>{item.name}</div>)}
                                 </Grid.Column>
                             </Grid>
                             <br/>
@@ -87,6 +87,7 @@ function CheckoutSummary(props) {
                             <BoldText>Payment With Stripe</BoldText>
                         </Grid.Column>
                         <Grid.Column width={7} verticalAlign='middle'>
+                            <p> Order total: ${total} </p>
                             <br/>
                             <Elements>
                                 <CheckoutForm/>

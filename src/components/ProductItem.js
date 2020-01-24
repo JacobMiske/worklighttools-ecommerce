@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components'
 
 function ProductItem(props) {
-    var stars;
-    var totalChits = 0;
-    var i;
+    let stars;
+    let totalChits = 0;
+    let i;
 
     for (i = 0; i < 5; i++) {
         if (i <= (props.item.stars - 1)) {
@@ -35,10 +35,18 @@ function ProductItem(props) {
                             <Image src={props.item.image} centered/>
                         </Link>
                         <Container style={{ paddingLeft: '2em' }}>
-                            <LinkStyle><Link to={'/Product/' + props.item.id}>{props.item.name}</Link></LinkStyle>
-                            <StoreText>WorkLight Tools</StoreText>
+                            <LinkStyle>
+                                <Link to={'/Product/' + props.item.id}>
+                                    {props.item.name}
+                                </Link>
+                            </LinkStyle>
+                            <StoreText>
+                                WorkLight Tools
+                            </StoreText>
                             <Grid columns={2}>
-                                <Grid.Column width={3}><PriceText>${props.item.price}</PriceText></Grid.Column>
+                                <Grid.Column width={3}>
+                                    <PriceText> ${props.item.price}</PriceText>
+                                </Grid.Column>
                             </Grid>
                         </Container>
                     </Grid.Column>

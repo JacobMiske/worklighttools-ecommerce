@@ -1,4 +1,4 @@
-// License MIT
+// MIT License
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -16,7 +16,8 @@ import Contact from "./pages/Contact";
 import SiteMap from "./pages/SiteMap";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
-import awsconfig from './aws-exports'
+import awsconfig from './aws-exports';
+import AppWithAuth from "./components/AppWithAuth";
 
 Amplify.configure(awsconfig)
 
@@ -32,7 +33,8 @@ const routing = (
         <StripeProvider apiKey="pk_test_revWelj4x1RBFQdPL0ctqDH000sejhBjYK">
             <Router>
                 <Switch>
-                    <Route exact path="/" component={App} />
+                    <Route exact path="/" component={AppWithAuth} />
+                    <Route exact path="/home" component={App} />
                     <Route path="/product/:id" component={Product} />
                     <Route path="/checkout" component={Checkout} />
                     <Route path="/ordercomplete" component={PlacedOrder}/>
