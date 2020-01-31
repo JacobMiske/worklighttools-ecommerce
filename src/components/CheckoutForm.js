@@ -21,13 +21,14 @@ class CheckoutForm extends Component {
 
 		if (response.ok) console.log("Purchase Complete!");
 		if (response.ok) this.setState({complete: true});
+
 	}
 
 	render() {
 		return (
 			<div className="checkout" style={styles}>
 				<CardElement />
-				<Button onClick={this.submit}>Purchase</Button>
+				<Button onClick={this.submit} to="/contact">Purchase</Button>
 			</div>
 		);
 	}

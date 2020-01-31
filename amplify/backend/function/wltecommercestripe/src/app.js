@@ -12,7 +12,7 @@ See the License for the specific language governing permissions and limitations 
 var express = require('express')
 var bodyParser = require('body-parser')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-const stripe = require("stripe")("sk_test_vCvAKbPv2ruTcy8JGzIzlwt2008awzIziX");
+const stripe = require("stripe")("sk_test_test_key_insert");
 
 // declare a new express app
 var app = express()
@@ -34,6 +34,8 @@ app.use(function(req, res, next) {
 
 app.get('/items', function(req, res) {
   // Add your code here
+  const items = ['hello', 'world']
+  res.json({ success: 'get call succeed!', items });
   res.json({success: 'get call succeed!', url: req.url});
 });
 

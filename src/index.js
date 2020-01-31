@@ -19,14 +19,14 @@ import Terms from "./pages/Terms";
 import awsconfig from './aws-exports';
 import AppWithAuth from "./components/AppWithAuth";
 
-Amplify.configure(awsconfig)
+Amplify.configure(awsconfig);
 
 Analytics.record('Store_Load');
         
 Analytics.autoTrack('pageView', {
     enable: true,
     type: 'SPA'
-})
+});
 
 const routing = (
     <AppProvider>
@@ -34,7 +34,6 @@ const routing = (
             <Router>
                 <Switch>
                     <Route exact path="/" component={AppWithAuth} />
-                    <Route exact path="/home" component={App} />
                     <Route path="/product/:id" component={Product} />
                     <Route path="/checkout" component={Checkout} />
                     <Route path="/ordercomplete" component={PlacedOrder}/>
