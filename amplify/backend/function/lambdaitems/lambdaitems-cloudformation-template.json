@@ -70,7 +70,7 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "awsamplifyecommerce-wlt-20191230005859-deployment",
+					"S3Bucket": "amplify-wltamplifyecommerce-dev-225400-deployment",
 					"S3Key": "amplify-builds/lambdaitems-5662514e695742506248-build.zip"
 				}
 			}
