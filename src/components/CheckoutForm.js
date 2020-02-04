@@ -1,6 +1,7 @@
 // MIT License
 
 import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 import { Button } from 'semantic-ui-react';
 import {CardElement, injectStripe} from 'react-stripe-elements';
 
@@ -28,7 +29,9 @@ class CheckoutForm extends Component {
 		return (
 			<div className="checkout" style={styles}>
 				<CardElement />
-				<Button onClick={this.submit} to="/contact">Purchase</Button>
+				<Link to="/ordercomplete">
+					<Button onClick={this.submit} to="/contact">Purchase</Button>
+				</Link>
 			</div>
 		);
 	}

@@ -122,4 +122,4 @@ const mainDiv = {
     marginLeft: '5em',
     marginRight: '1em',
     marginTop: '2em'
-}
+};

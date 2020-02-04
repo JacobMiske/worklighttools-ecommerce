@@ -47,27 +47,36 @@ function CheckoutSummary(props) {
         <div>
             <Grid columns={3}>
                     <Grid.Row>
+
                         <Grid.Column width={1}>
                             <BoldText>1</BoldText>
                         </Grid.Column>
+
                         <Grid.Column width={4}>
                             <BoldText>Shipping address</BoldText>
                         </Grid.Column>
+
                         <Grid.Column width={7}>
                             <NormalText>{getAtt('given_name') + ' ' + getAtt('family_name')}
                             <br/>{getAtt('custom:street')}<br/>{getAtt('custom:city')}, {getAtt('custom:state')} {getAtt('custom:postcode')}
                             <br/>{getAtt('custom:country')}
                             </NormalText>
                         </Grid.Column>
+
                     </Grid.Row>
+
                     <Divider/>
+
                     <Grid.Row>
+
                         <Grid.Column width={1}>
                             <BoldText>2</BoldText>
                         </Grid.Column>
+
                         <Grid.Column width={4}>
                             <BoldText>Cart Details</BoldText>
                         </Grid.Column>
+
                         <Grid.Column width={7} verticalAlign='middle'>
                             <Grid columns={3}>
                                 <Grid.Column width={10}>
@@ -77,15 +86,21 @@ function CheckoutSummary(props) {
                             </Grid>
                             <br/>
                         </Grid.Column>
+
                     </Grid.Row>
+
                     <Divider/>
+
                     <Grid.Row>
+
                         <Grid.Column width={1}>
                             <BoldText>3</BoldText>
                         </Grid.Column>
+
                         <Grid.Column width={4}>
                             <BoldText>Payment With Stripe</BoldText>
                         </Grid.Column>
+
                         <Grid.Column width={7} verticalAlign='middle'>
                             <p> Order total: ${total} </p>
                             <br/>
@@ -93,23 +108,7 @@ function CheckoutSummary(props) {
                                 <CheckoutForm/>
                             </Elements>
                         </Grid.Column>
-                    </Grid.Row>
-                    <Divider/>
-                    <Grid.Row>
-                        <Grid.Column width={1}>
-                        </Grid.Column>
-                        {/*<Grid.Column width={15}>*/}
-                        {/*    <Segment>*/}
-                        {/*        <Grid columns={2}>*/}
-                        {/*            /!*<Grid.Column width={4}>*!/*/}
-                        {/*            /!*    <Button color='blue' loading={props.placedOrder} onClick={props.onOrder}>Place your order</Button>*!/*/}
-                        {/*            /!*</Grid.Column>*!/*/}
-                        {/*            <Grid.Column width={8} verticalAlign='middle'>*/}
-                        {/*                <TotalText>Order total: ${total}</TotalText>*/}
-                        {/*            </Grid.Column>*/}
-                        {/*        </Grid>*/}
-                        {/*    </Segment>*/}
-                        {/*</Grid.Column>*/}
+
                     </Grid.Row>
                 </Grid>
         </div>
@@ -126,9 +125,3 @@ const BoldText = styled.div`
 const NormalText = styled.div`
   font-size: 1em;
 `;
-
-// const TotalText = styled.div`
-//   font-size: 1.2em;
-//   font-weight: bold
-//   color: #B12704;
-// `;

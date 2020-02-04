@@ -2,15 +2,14 @@
 // SPDX-License-Identifier: MIT-0
 
 import React from 'react'
-import { Grid, Header, Image } from 'semantic-ui-react'
+import { Grid, Header } from 'semantic-ui-react'
+import TopMenu from "../components/TopMenu";
 
 function PlacedOrder() {
     return (
         <Grid columns={2} style={topBanner}>
+            <TopMenu/>
             <Grid.Row>
-                <Grid.Column width={2}>
-                    <Image src='/images/store-logo-2.png' style={logoStyle} />
-                </Grid.Column>
                 <Grid.Column width={12} verticalAlign='middle' textAlign='center' style={headerStyle}>
                     <Header as='h1' textAlign='center'>Order Complete</Header>
                 </Grid.Column>
@@ -27,14 +26,8 @@ const topBanner = {
     borderStyle: 'solid',
     borderWidth: '0 0 1px 0',
     height: '73px'
-}
-
-const logoStyle = {
-    marginRight: '1.5em', 
-    marginLeft: '4em', 
-    marginTop: '5px'
-}
+};
 
 const headerStyle = {
     marginTop: '5px'
-}
+};
