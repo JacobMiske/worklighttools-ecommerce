@@ -92,23 +92,15 @@ function Checkout(props) {
             <div style={mainDiv}>
                 <Grid columns={2}>
                     <Grid.Row>
-                    <Grid.Column floated='left' width={15}>
-                        <CheckoutSummary placedOrder={ordering} 
-                                         onCardUpdate={handleCardUpdate} 
-                                         onOrder={submitOrder}
-                                         user={user}
-                                         cart={cart}
-                                         total={totalPurchase}
-                                         />
-                    </Grid.Column>
-                    {/*<Grid.Column floated='right' width={5}>*/}
-                    {/*    <CheckoutPayment placedOrder={ordering} */}
-                    {/*                     onOrder={submitOrder}*/}
-                    {/*                     user={user}*/}
-                    {/*                     cart={cart}*/}
-                    {/*                     total={totalPurchase}*/}
-                    {/*                     />*/}
-                    {/*</Grid.Column>*/}
+                        <Grid.Column floated='left' width={15}>
+                            <CheckoutSummary placedOrder={ordering}
+                                             onCardUpdate={handleCardUpdate}
+                                             onOrder={submitOrder}
+                                             user={user}
+                                             cart={cart}
+                                             total={totalPurchase}
+                                             />
+                        </Grid.Column>
                     </Grid.Row>
                 </Grid>
             </div>

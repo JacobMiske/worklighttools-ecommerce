@@ -7,12 +7,19 @@ import TopMenu from "../components/TopMenu";
 
 function PlacedOrder() {
     return (
-        <Grid columns={2} style={topBanner}>
+        <Grid rows={2} style={topBanner}>
             <TopMenu/>
             <Grid.Row>
                 <Grid.Column width={12} verticalAlign='middle' textAlign='center' style={headerStyle}>
-                    <Header as='h1' textAlign='center'>Order Complete</Header>
+                    <Header as='h1' textAlign='center'>
+                      Order Complete
+                    </Header>
                 </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <p>
+                Hello world
+              </p>
             </Grid.Row>
         </Grid>
     )
