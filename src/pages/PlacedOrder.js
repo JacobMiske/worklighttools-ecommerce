@@ -1,18 +1,12 @@
 // MIT License
-
-import React, { useContext } from 'react'
-import { Grid, Header } from 'semantic-ui-react'
+import React from 'react';
+import { Grid, Header } from 'semantic-ui-react';
 import TopMenu from "../components/TopMenu";
-import AppContext from "../context/AppContext";
 import styled from "styled-components";
 
 function PlacedOrder(props) {
-  // const { cart } = useContext(AppContext);
-  // const listItems = items.map((number) =>
-  //   <li>{number}</li>
-  // );
+
   const { user } = props;
-  // const { total } = props;
 
   function getAtt(name) {
     return user ? user[name] : ""
