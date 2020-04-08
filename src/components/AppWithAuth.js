@@ -7,10 +7,6 @@ import { Authenticator } from "aws-amplify-react";
 import signUpConfig from '../config/signUpConfig'
 
 class AppWithAuth extends React.Component {
-	// constructor(props, context) {
-	// 	super(props, context);
-	// }
-
 	render() {
 		return (
 			<div>
