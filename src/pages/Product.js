@@ -26,9 +26,9 @@ function Product(props) {
 			if (_product.length === 1) product = _product[0];
 
 			if (product) {
-					var features = product.info.map((item) => {
-							return <li key={item.length}>{item}</li>
-					})
+                var features = product.info.map((item) => {
+                    return <li key={item.length}>{item}</li>
+                })
 			}
 
 			let quant = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {

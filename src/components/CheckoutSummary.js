@@ -1,11 +1,10 @@
 // MIT License
 
-import React, { useContext } from 'react'
+import React from 'react' // , { useContext}
 import { Grid, Divider } from 'semantic-ui-react'
 import styled from 'styled-components';
-import AppContext from "../context/AppContext";
+// import AppContext from "../context/AppContext";
 
-// import axios from 'axios';
 import { toast } from 'react-toastify';
 import CheckoutForm from "./CheckoutForm";
 import {Elements} from "react-stripe-elements";
@@ -13,35 +12,14 @@ import {Elements} from "react-stripe-elements";
 toast.configure();
 
 function CheckoutSummary(props) {
-    const { cart } = useContext(AppContext);
-    // const listItems = items.map((number) =>
-    //   <li>{number}</li>
-    // );
+    // const { cart } = useContext(AppContext);
+    // const { items } = useContext(AppContext);
     const { user } = props;
     const { total } = props;
-    // const [product] = React.useState({
-    //     name: "PCB1",
-    // });
 
     function getAtt(name) {
         return user ? user[name] : ""
     }
-
-    // async function handleToken(token, addresses) {
-    //     const response = await axios.post('https://nrv4g.sse.codesandbox.io/checkout', {
-    //         token,
-    //         product
-    //     })
-    //     const { status } = response.data
-    //     if (status === 'success') {
-    //         toast('Success, check email for details!',
-    //           { type: 'success'})
-    //     } else {
-    //         toast('something went wrong',
-    //           { type: "error"});
-    //     }
-    //     console.log({token, addresses})
-    // }
 
     return (
         <div>
@@ -81,7 +59,6 @@ function CheckoutSummary(props) {
                             <Grid columns={3}>
                                 <Grid.Column width={10}>
                                     <p>Items:</p>
-                                    {cart.items.map(item => <div>{item.name}</div>)}
                                 </Grid.Column>
                             </Grid>
                             <br/>

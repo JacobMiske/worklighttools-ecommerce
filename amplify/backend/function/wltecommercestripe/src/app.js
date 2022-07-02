@@ -12,7 +12,7 @@ See the License for the specific language governing permissions and limitations 
 var express = require('express')
 var bodyParser = require('body-parser')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-const stripe = require("stripe")("sk_test_test_key_insert");
+const stripe = require("stripe")("sk_test_vCvAKbPv2ruTcy8JGzIzlwt2008awzIziX");
 
 // declare a new express app
 var app = express()

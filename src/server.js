@@ -1,9 +1,10 @@
 const app = require("express")();
-const stripe = require("stripe")("sk_test_key");
+const stripe = require("stripe")("sk_test_vCvAKbPv2ruTcy8JGzIzlwt2008awzIziX");
 
 app.use(require("body-parser").text());
 
 app.post("/charge", async (req, res) => {
+	console.log("Charge applied!");
 	try {
 		let {status} = await stripe.charges.create({
 			amount: 2000,
