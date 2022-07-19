@@ -56,7 +56,7 @@ function TopMenu() {
 							onClick={CheckoutClick}
 						/>
 					</Link>
-					<Button onClick={SignOutButton}>Sign Out</Button>
+					<Button onClick={SignOutButton}>Login</Button>
 				</Menu.Item>
 			</Menu>
 		</div>

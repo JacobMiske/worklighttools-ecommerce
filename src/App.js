@@ -51,11 +51,13 @@ class App extends React.Component {
           <Footer style={{marginTop: '2em'}}/>
         </div>
       );
-    } else {
+    }
+    else {
       // If a user is not signed in, display this.
       return (
         <div style={styles}>
           <InitState/>
+          <TopMenu/>
           <Container text style={{marginTop: '1em', marginBottom: '1em'}}>
             <Header as='h1' style={{textAlign: 'center'}}>
               News at WorkLight Tools

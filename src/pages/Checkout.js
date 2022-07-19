@@ -9,6 +9,7 @@ import AppContext from '../context/AppContext'
 import InitState from './InitState'
 import CheckoutBanner from '../components/CheckoutBanner'
 import CheckoutSummary from '../components/CheckoutSummary'
+import Footer from '../components/Footer'
 // import CheckoutPayment from '../components/CheckoutPayment'
 // var product_data = require('../products.json');
 // const uuidv4 = require('uuid/v4');
@@ -103,6 +104,15 @@ function Checkout(props) {
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
+            </div>
+            <div
+                style={{
+                    position: "fixed",
+                    bottom: 0,
+                    left: 0,
+                    right: 0
+                }}>
+                <Footer style={{bottom: 0, marginTop: '2em'}}/>
             </div>
         </div>
     )

@@ -10,9 +10,9 @@ class AppWithAuth extends React.Component {
 	render() {
 		return (
 			<div>
+				<App />
 				<Authenticator hide={[SignIn]} amplifyConfig={config} signUpConfig={signUpConfig} >
 					<CustomSignIn />
-					<App />
 				</Authenticator>
 			</div>
 		);

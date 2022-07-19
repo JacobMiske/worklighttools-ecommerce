@@ -45,5 +45,6 @@ const menuStyle = {
 };
 
 const divStyle = {
-		paddingTop: '6em'
+		paddingTop: '6em',
+		bottom: 0,
 };
