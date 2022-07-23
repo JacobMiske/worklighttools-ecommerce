@@ -1,5 +1,30 @@
 {
-  "auth": {},
+  "auth": {
+    "worklighttoolsecommercef41d1daf": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      }
+    }
+  },
   "analytics": {
     "awsamplifyecommerce": {
       "service": "Pinpoint",
@@ -34,7 +59,22 @@
       "build": true
     }
   },
-  "api": {},
+  "api": {
+    "apic4151324": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "lambdaitems",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
+  },
   "hosting": {
     "S3AndCloudFront": {
       "service": "S3AndCloudFront",

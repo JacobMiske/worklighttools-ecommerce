@@ -44,6 +44,9 @@
           "deploymentBucketName": "amplify-worklighttools-ecommerce-dev-132040-deployment",
           "s3Key": "amplify-builds/wltecommercestripe-786d347458596837424f-build.zip"
         }
+      },
+      "auth": {
+        "worklighttoolsecommercef41d1daf": {}
       }
     }
   }

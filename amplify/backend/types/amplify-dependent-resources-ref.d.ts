@@ -1,4 +1,16 @@
 export type AmplifyDependentResourcesAttributes = {
+    "auth": {
+        "worklighttoolsecommercef41d1daf": {
+            "IdentityPoolId": "string",
+            "IdentityPoolName": "string",
+            "UserPoolId": "string",
+            "UserPoolArn": "string",
+            "UserPoolName": "string",
+            "AppClientIDWeb": "string",
+            "AppClientID": "string",
+            "CreatedSNSRole": "string"
+        }
+    },
     "analytics": {
         "awsamplifyecommerce": {
             "Region": "string",
@@ -28,6 +40,13 @@ export type AmplifyDependentResourcesAttributes = {
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
+        }
+    },
+    "api": {
+        "apic4151324": {
+            "RootUrl": "string",
+            "ApiName": "string",
+            "ApiId": "string"
         }
     },
     "hosting": {
