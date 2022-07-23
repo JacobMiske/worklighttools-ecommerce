@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Pinpoint resource stack creation using Amplify CLI",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"9.1.0\",\"stackType\":\"analytics-Pinpoint\",\"metadata\":{}}",
   "Parameters": {
     "appName": {
       "Type": "String"
@@ -199,7 +199,7 @@
           }
         },
         "Handler": "index.handler",
-        "Runtime": "nodejs10.x",
+        "Runtime": "nodejs16.x",
         "Timeout": "300",
         "Role": {
           "Fn::GetAtt": [

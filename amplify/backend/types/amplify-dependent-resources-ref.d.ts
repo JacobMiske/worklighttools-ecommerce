@@ -1,15 +1,4 @@
 export type AmplifyDependentResourcesAttributes = {
-    "auth": {
-        "awsamplifyecommerceauth": {
-            "IdentityPoolId": "string",
-            "IdentityPoolName": "string",
-            "UserPoolId": "string",
-            "UserPoolName": "string",
-            "AppClientIDWeb": "string",
-            "AppClientID": "string",
-            "AppClientSecret": "string"
-        }
-    },
     "analytics": {
         "awsamplifyecommerce": {
             "Region": "string",
@@ -39,12 +28,6 @@ export type AmplifyDependentResourcesAttributes = {
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
-        }
-    },
-    "api": {
-        "awsamplifyecommerceapi": {
-            "RootUrl": "string",
-            "ApiName": "string"
         }
     },
     "hosting": {

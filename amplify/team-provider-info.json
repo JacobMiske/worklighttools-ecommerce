@@ -20,5 +20,31 @@
         "wltecommercestripe": {}
       }
     }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-worklighttools-ecommerce-dev-132040-authRole",
+      "UnauthRoleArn": "arn:aws:iam::713547874290:role/amplify-worklighttools-ecommerce-dev-132040-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::713547874290:role/amplify-worklighttools-ecommerce-dev-132040-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-worklighttools-ecommerce-dev-132040-deployment",
+      "UnauthRoleName": "amplify-worklighttools-ecommerce-dev-132040-unauthRole",
+      "StackName": "amplify-worklighttools-ecommerce-dev-132040",
+      "StackId": "arn:aws:cloudformation:us-east-1:713547874290:stack/amplify-worklighttools-ecommerce-dev-132040/c712d920-0aab-11ed-b943-0ecdace6c1a9",
+      "AmplifyAppId": "dtzqqaq87l4md",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-worklighttools-ecommerce-dev-132040-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "lambdaitems": {
+          "deploymentBucketName": "amplify-worklighttools-ecommerce-dev-132040-deployment",
+          "s3Key": "amplify-builds/lambdaitems-556f4658767549304938-build.zip"
+        },
+        "wltecommercestripe": {
+          "deploymentBucketName": "amplify-worklighttools-ecommerce-dev-132040-deployment",
+          "s3Key": "amplify-builds/wltecommercestripe-786d347458596837424f-build.zip"
+        }
+      }
+    }
   }
 }
