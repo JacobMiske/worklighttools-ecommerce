@@ -66,24 +66,24 @@ function TopMenu() {
 export default TopMenu;
 
 const menuStyle = {
-	// HTML lightgray / lightgrey
-	background: '#D3D3D3',
-	borderColor: '#D3D3D3',
-	borderStyle: 'solid',
-	borderWidth: '0 0 1px 0'
+	// white
+	background: '#FFFFFF',
+	borderColor: '#EBB407',
+	// borderStyle: 'solid',
+	borderWidth: '0 0 10px 0'
 };
 
 const headerStyle = {
-	borderBottom: '1em',
-	borderColor: '#D3D3D3',
-	borderStyle: 'solid',
+	borderBottom: '2em',
+	borderColor: '#EBB407',
+	// borderStyle: 'solid',
 	borderWidth: '0 0 1px 0'
 };
 
 const divStyle = {
 	paddingTop: '6em',
-	borderColor: '#D3D3D3',
-	borderStyle: 'solid',
+	borderColor: '#EBB407',
+	// borderStyle: 'solid',
 	borderWidth: '0 0 1px 0'
 };
 

@@ -31,7 +31,7 @@ We will break this builder session into stages to build out our application.
 ![store](.images/store-demo.png)
 
 ## [1. Environment Setup](documentation/setup/)
-We'll be using the AWS Cloud9 environment to work with Amplify and deploy our application.  This step will create and configure the Cloud9 environment.  We'll then install the AWS Amplify CLI.
+We'll be using the AWS environment to work with Amplify and deploy our application.  This step will create and configure the Cloud9 environment.  We'll then install the AWS Amplify CLI.
 
 ## [2. Build the Amplify Backend](documentation/backend/)
 Create our backend services (Pinpoint, Cognito, DynamoDB, API Gateway and Lambda)
