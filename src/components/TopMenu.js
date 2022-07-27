@@ -22,27 +22,15 @@ function TopMenu() {
 
 	return (
 		<div style={divStyle}>
-			<Menu fixed='top' style={menuStyle} fluid widths={5}>
+			<Menu fixed='top' style={menuStyle} fluid widths={2}>
 				<Menu.Item header style={headerStyle}>
 					<Link to='/'>
 						<img src={logo} className="App-logo" alt="logo" width="50" height="50"/>
 					</Link>
-				</Menu.Item>
-				<Menu.Item>
 					<Link to='/'>
 						<p className="large black text" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
 							WorkLight Tools
 						</p>
-					</Link>
-				</Menu.Item>
-				<Menu.Item>
-					<Link to="/about" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
-						<p className="large blue text">About</p>
-					</Link>
-				</Menu.Item>
-				<Menu.Item>
-					<Link className="large blue text" to="/contact" style={{marginRight: '1.5em', marginLeft: '0.5em'}}>
-						<p className="large blue text">Contact</p>
 					</Link>
 				</Menu.Item>
 				<Menu.Item position='right'>
@@ -69,21 +57,18 @@ const menuStyle = {
 	// white
 	background: '#FFFFFF',
 	borderColor: '#EBB407',
-	// borderStyle: 'solid',
 	borderWidth: '0 0 10px 0'
 };
 
 const headerStyle = {
 	borderBottom: '2em',
 	borderColor: '#EBB407',
-	// borderStyle: 'solid',
 	borderWidth: '0 0 1px 0'
 };
 
 const divStyle = {
 	paddingTop: '6em',
 	borderColor: '#EBB407',
-	// borderStyle: 'solid',
 	borderWidth: '0 0 1px 0'
 };
 
